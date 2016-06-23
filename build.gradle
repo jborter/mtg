@@ -23,9 +23,17 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+dependencyManagement {
+    imports {
+        mavenBom 'org.springframework.cloud:spring-cloud-netflix:1.0.7.RELEASE'
+        mavenBom 'io.spring.platform:platform-bom:2.0.3.RELEASE'
+    }
+}
+
 dependencies {
-    // tag::jetty[]
-    compile("org.springframework.boot:spring-boot-starter-web");
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    compile('org.springframework.boot:spring-boot-starter-actuator')
 }
 
 task wrapper(type: Wrapper) {
