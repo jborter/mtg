@@ -1,9 +1,6 @@
 server:
   port: 8081
-
-spring:
-  application:
-    name: mtg-image-server
+  context-path: /mtg-image-server
 
 eureka:
   client:

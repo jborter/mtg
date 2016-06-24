@@ -12,8 +12,8 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 jar {
-    baseName = 'gs-spring-boot'
-    version =  '0.1.0'
+    baseName = 'mtg-image-server'
+    version =  '1.0.0'
 }
 
 repositories {
@@ -33,7 +33,6 @@ dependencyManagement {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
-    compile('org.springframework.boot:spring-boot-starter-actuator')
 }
 
 task wrapper(type: Wrapper) {
